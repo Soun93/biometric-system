@@ -1,0 +1,64 @@
+.user-card-container {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.user-card-image {
+  display: grid;
+  place-items: center;
+}
+
+.user-card-image img {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  border: 5px solid var(--secondary-color);
+}
+
+.user-card-info {
+  position: absolute;
+  top: 25px;
+  left: -300px;
+  width: 260px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition: all 300ms ease;
+}
+
+.user-card-info div * {
+  color: var(--font-color);
+}
+
+.user-card-info div span{
+  font-size: 30px;
+}
+
+.user-card-info::before{
+  content:"";
+  position: absolute;
+  right: -40px;
+  top: 40%;
+  transform: translate(-50%);
+  border: 15px solid ;
+  border-color: #0000 #0000 #0000 var(--secondary-color);
+}
+
+.user-card-info div p{
+  font-size: 14px;
+  text-align: right;
+}
+
+.user-card-container:hover .user-card-info {
+  opacity: 1;
+}
+
+@media (max-height: 500px) OR (max-width: 768px) {
+  .user-card-container {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+
+.carousel-container {
+  position: relative;
+  min-width: 200px;
+  min-height: 200px;
+  height: 100%;
+  background-color: black;
+}
+
+.carousel-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.carousel-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-options {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 10%;
+  width: 100%;
+  bottom: 0;
+}
+
+/* CAROUSEL ITEM */
+
+.carousel-item {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.carousel-item:hover {
+  transform: scale(1.2);
+}

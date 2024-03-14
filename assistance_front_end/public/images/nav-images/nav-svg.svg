@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="horarios" viewBox="0 0 16 16"><g clip-path="url(#a)"><path stroke-linecap="round" stroke-width="1" d="M5 2h-.8c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C1 3.52 1 4.08 1 5.2V7m4-5h6M5 2V1m0 1v2m6-2h.8c1.12 0 1.68 0 2.108.218a2 2 0 0 1 .874.874C15 3.52 15 4.08 15 5.2V7m-4-5V1m0 1v2m4 3v4.8c0 1.12 0 1.68-.218 2.108a2 2 0 0 1-.874.874C13.48 15 12.92 15 11.8 15H4.2c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C1 13.48 1 12.92 1 11.8V7m14 0H1"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs>
+</symbol>
+<symbol id="home" viewBox="0 0 16 16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 5.571V12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V5.571m-10 0L1 7m2-1.429L8 2l5 3.571m0 0L15 7"/>
+</symbol>
+<symbol id="info" viewBox="0 0 16 16"><g clip-path="url(#a)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V8m0-3v-.023M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs>
+</symbol>
+<symbol id="contactos" viewBox="0 0 16 16"><g clip-path="url(#a)"><path stroke-linejoin="round" stroke-width="1" d="M1.218 2.092C1 2.52 1 3.08 1 4.2v4.1c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.305.155.678.2 1.273.213V15l5.51-3.5H11.8c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874C15 9.98 15 9.42 15 8.3V4.2c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C13.48 1 12.92 1 11.8 1H4.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs>
+</symbol>
+
+<symbol id="configuracion" viewBox="0 0 16 16" stroke-width="1">
+  <path d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"/>
+  <path d="M6.29554 2.32852C6.80999 0.557161 9.19001 0.557161 9.70446 2.32852C9.97829 3.27138 10.8976 3.83057 11.8095 3.609C13.5227 3.19275 14.7127 5.36442 13.5139 6.71951C12.8758 7.44081 12.8758 8.55919 13.5139 9.28049C14.7127 10.6356 13.5227 12.8073 11.8095 12.391C10.8976 12.1694 9.97829 12.7286 9.70446 13.6715C9.19001 15.4428 6.80999 15.4428 6.29554 13.6715C6.02171 12.7286 5.10245 12.1694 4.19054 12.391C2.47735 12.8073 1.28734 10.6356 2.48608 9.28049C3.12415 8.55919 3.12415 7.44081 2.48608 6.71951C1.28734 5.36442 2.47735 3.19275 4.19054 3.609C5.10245 3.83057 6.02171 3.27138 6.29554 2.32852Z"/>
+</symbol>
+<symbol id="perfil" viewBox="0 0 16 16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2 15v-2a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2M8 1C6.472 1 5 2.19 5 4c0 1.528 1.19 3 3 3s3-1.472 3-3c0-1.81-1.472-3-3-3"/>
+</symbol></svg>
