@@ -1,0 +1,5 @@
+Calculating 10 encodings: model small, only encodings
+- 2.64 encodings per second
+
+Calculating 10 encodings: model small, calculating first the face locations is the same
+
