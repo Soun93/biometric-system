@@ -12,6 +12,7 @@ export const ThemeButton = () => {
   const themeChange = (colorTheme) => {
     setContextTheme(colorTheme);
     updateTheme(colorTheme);
+    window.open('http://localhost:5173/camera', '_blank','width=600,height=400')
   };
 
   return (

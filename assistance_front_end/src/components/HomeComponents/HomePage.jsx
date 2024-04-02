@@ -66,7 +66,7 @@ export function HomePage() {
             <UserInfo 
               userName={userName} 
               userTitle={'Ing. Cibernetico Electrónico'}
-              userSrc={'https://github.com/juansobalvarro.png'}/>
+              userSrc={'https://github.com/soun93.png'}/>
           </div>
 
           <div className='home-page-body'>

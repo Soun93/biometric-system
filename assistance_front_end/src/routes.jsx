@@ -5,6 +5,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import { LoginPage } from './components/LoginComponents/LoginPage.jsx'
 import { HomePage } from './components/HomeComponents/HomePage.jsx'
 import { ProtectedRoute } from './auth/protectedRoute.jsx'
+import { CameraPage } from './components/CameraComponent/CameraPage.jsx';
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         path: "/home",
         element: <HomePage />,
+      },
+      {
+        path: "/camera",
+        element: <CameraPage />,
       },
     ],
   },

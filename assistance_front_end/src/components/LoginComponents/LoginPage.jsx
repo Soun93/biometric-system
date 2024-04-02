@@ -1,4 +1,4 @@
-import '../../styles/login.css'
+import '../../styles/LoginPage.css'
 
 import { LoginForm } from './LoginForm.jsx'
 import { ThemeButton } from '../CommonComponents/ThemeButton.jsx'
