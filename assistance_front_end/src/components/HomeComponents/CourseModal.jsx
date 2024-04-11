@@ -1,25 +1,77 @@
+import { useState } from 'react';
 import '../../styles/CourseModal.css'
 import PropTypes from 'prop-types';
+import { getUrlSvgElement } from '../../logic/constUrl';
+import SvgElement from '../CommonComponents/SvgElement';
 
-export const CourseModal = ({courseInformation, closeModal}) => {
+let studentList = [
+  {
+    id: 1,
+    student_name: 'Jean Manuel Ocampo Aragón',
+    student_carnet: 'ACA01-1220-12',
+    entry_time: '10 am',
+    exit_time: '12 pm',
+    assitance: 'Check'
+  },
+  {
+    id: 2,
+    student_name: 'Tomas Enmanuel Palacios Gallo',
+    student_carnet: 'ACA01-1220-12',
+    entry_time: '10 am',
+    exit_time: '12 pm',
+    assitance: 'Check'
+  },
+  {
+    id: 3,
+    student_name: 'Roxana Raquel Vanegas',
+    student_carnet: 'ACA01-1220-12',
+    entry_time: '10 am',
+    exit_time: '12 pm',
+    assitance: 'Check'
+  },  
+  {
+    id: 4,
+    student_name: 'Jesús de León Ocampo Aragón',
+    student_carnet: 'ACA01-1220-12',
+    entry_time: '10 am',
+    exit_time: '12 pm',
+    assitance: 'Check'
+  },
+]
+
+export const CourseModal = ({courseInfo, closeModal}) => {
+  const [assistanceList, setAssitanceList] = useState(studentList);
+
   const styles = {
-    display: courseInformation ? 'grid' : 'none'
+    display: courseInfo ? 'grid' : 'none'
   }
+
+  const filterByName = (event) => {
+    const input = event.target.value.toLowerCase();
+    const NewStudentList = studentList.filter( student => student.student_name.toLowerCase().includes(input));
+    setAssitanceList(NewStudentList);
+  }
+  const buttonStyle = {
+    stroke: 'var(--font-color)',
+    fill: 'none',
+    width: '80%',
+    height: '40px',
+    'stroke-width': '4px'
+  }
+
   return (
     <div className='modal-course-container' style={styles}>
       <div className='modal-course-card'>
         <div className='modal-course-header'>
-          <h3>{courseInformation.courseName}</h3>
+          <h3>{courseInfo.courseName}</h3>
           <button onClick={closeModal}>X</button>
         </div>
         <div className='modal-course-options'>
           <span>
             <label htmlFor="search-box">
-              <svg viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M34.6034 22.0612C33.0703 29.6034 25.6329 34.4909 17.9916 32.9776C10.3502 31.4644 5.39853 24.1236 6.93165 16.5814C8.46476 9.0392 15.9021 4.15176 23.5435 5.66499C31.1848 7.17821 36.1365 14.5191 34.6034 22.0612ZM37.6196 22.6585C35.7522 31.8449 26.6935 37.7978 17.3864 35.9547C14.8229 35.4471 12.5079 34.4009 10.5381 32.9595L4.44602 39.4586C3.86911 40.0741 2.89593 40.1114 2.27238 39.542C1.64882 38.9725 1.61101 38.012 2.18793 37.3965L8.24072 30.9393C4.56808 27.0749 2.77897 21.5749 3.91543 15.9841C5.78277 6.79771 14.8415 0.844808 24.1486 2.68791C33.4558 4.53101 39.4869 13.4722 37.6196 22.6585Z" />
-              </svg>
+              <SvgElement svgName='lens' svgStyles={buttonStyle}></SvgElement>
             </label>
-            <input type='text' id='search-box'placeholder='Nombre del Alumno...' />
+            <input type='text' id='search-box' placeholder='Nombre del Alumno...' onChange={(event) => filterByName(event)} />
           </span>
         </div>
         <div className='modal-course-body'>
@@ -34,18 +86,16 @@ export const CourseModal = ({courseInformation, closeModal}) => {
               </tr>
             </thead>
             <tbody>
-        {[0,1,2,3,4].map((index) => (
-        <tr key={index}>
-          <td>Jean Manuel Ocampo Aragón</td>
-          <td className='modal-optional-info'>ACA01-1220-12</td>
-          <td className='modal-optional-info'>10 am</td>
-          <td className='modal-optional-info'>12 pm </td>
-          <td>Check</td>
+        {assistanceList.map(({id, student_name, student_carnet, entry_time, exit_time, assitance}) => (
+        <tr key={id}>
+          <td>{student_name}</td>
+          <td className='modal-optional-info'>{student_carnet}</td>
+          <td className='modal-optional-info'>{entry_time}</td>
+          <td className='modal-optional-info'>{exit_time}</td>
+          <td>{assitance}</td>
         </tr>
 
         ))}
-
-
             </tbody>
           </table>
         </div>
@@ -55,7 +105,7 @@ export const CourseModal = ({courseInformation, closeModal}) => {
 }
 
 CourseModal.propTypes = {
-  courseInformation: PropTypes.shape({
+  courseInfo: PropTypes.shape({
     courseName: PropTypes.string,
     courseGroup: PropTypes.string,
     courseRoom: PropTypes.string,

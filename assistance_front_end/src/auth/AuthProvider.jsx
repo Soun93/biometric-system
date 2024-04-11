@@ -12,6 +12,7 @@ export function AuthProvider({ children }) {
 
   function getAccessToken() {
     const token = localStorage.getItem('token');
+
     if (!token) return null;
     setIsAuthenticated(true);
     return JSON.parse(token);

@@ -2,10 +2,10 @@ import '../../styles/Nav.css'
 import { NavItems } from './NavItems.jsx'
 import { ThemeButton } from '../CommonComponents/ThemeButton.jsx'
 
-export function Nav() {
+export function Nav({ opacity }) {
 
   return (
-    <nav>
+    <nav style={ opacity }>
       <div className="nav-container">
         <div className='nav-header'>
         </div>

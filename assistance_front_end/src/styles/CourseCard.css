@@ -85,6 +85,7 @@
     width: 15rem;
     height: 10rem;
   }
+
   .course-card-info {
     font-size: 14px;
     align-items: end;
@@ -93,6 +94,7 @@
   .course-info-wrapper {
     flex-direction: column;
   }
+
   .course-card-body {
     justify-content: end;
   }
@@ -103,7 +105,7 @@
   .course-card-header span {
     font-size: 20px;
   }
-  
+
   .course-card-container {
     height: min-content;
   }

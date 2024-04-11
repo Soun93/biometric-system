@@ -57,6 +57,11 @@
   opacity: 1;
 }
 
+.logout {
+  padding: 5px 0;
+  text-decoration: underline;
+}
+
 @media (max-height: 500px) OR (max-width: 768px) {
   .user-card-container {
     display: none;

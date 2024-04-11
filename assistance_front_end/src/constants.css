@@ -11,14 +11,16 @@
 [data-theme='light'] {
   --background-color: #88AB8E;
   --secondary-color: #EEE7DA;
-  --destacable-message: #EEE7DA;
   --font-color:rgb(65, 65, 65);
+  --destacable-message: #EEE7DA;
 }
 
 [data-theme='dark'] {
   --background-color: #252B48;
   --secondary-color: #445069;
   --font-color: #ececec;
+  --destacable-message: #ececec;
+
 }
 
 * {

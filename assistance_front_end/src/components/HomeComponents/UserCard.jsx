@@ -1,5 +1,6 @@
 import '../../styles/UserCard.css'
-export const UserInfo = ( { userName, userTitle, userSrc} ) => {
+import SvgElement from '../CommonComponents/SvgElement'
+export const UserCard = ( { userName, userTitle, userSrc} ) => {
 
   return (
     <>
@@ -10,9 +11,13 @@ export const UserInfo = ( { userName, userTitle, userSrc} ) => {
             </div>
             <div className='user-card-info'>
               <div>
-              <span>{userName}</span>
-              <p>{userTitle}</p>
-              <p>10 de Dic. 23</p>
+                <span>{userName}</span>
+                <p>{userTitle}</p>
+                <p>10 de Dic. 23</p>
+                <p className='logout'>
+                  Logout
+                  {/* <SvgElement svgName='logout'></SvgElement> */}
+                </p>
               </div>
             </div>
           </div>

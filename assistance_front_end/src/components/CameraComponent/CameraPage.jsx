@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import '../../styles/CameraPage.css';
 
-export function CameraPage() { 
+export function CameraPage() {
   const videoRef = useRef(null);
   const photoRef = useRef(null);
 
@@ -25,6 +25,7 @@ export function CameraPage() {
   return (
     <>
       <div className="camera-page-container">
+
         <div className="camera">
           <video ref={videoRef}></video>
           <button>SNAP!</button>

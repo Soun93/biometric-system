@@ -1,12 +1,13 @@
 // COMPONENTS
 import { Nav } from '../NavComponents/Nav.jsx'
-import { UserInfo } from './UserInfo.jsx'
+import { UserCard } from './UserCard.jsx'
 import { CourseModal } from './CourseModal.jsx';
 import { CourseCard } from './CourseCard.jsx'
 import { useState } from 'react';
 
 //STYLES
 import '../../styles/HomePage.css'
+import CameraButton from '../CameraComponent/CameraButton.jsx';
 
 const coursesList = [
   {
@@ -43,32 +44,41 @@ const coursesList = [
 
 export function HomePage() {
   let userName = 'Jean Ocampo';
-  const [courseInformation, setCourseInformation] = useState(null);
+  const [courseInfo, setCourseInfo] = useState(null);
+  const [showNav, setShowNav] = useState({
+    opacity: '1'
+  })
+
   const openModal = (courseInfo) => {
-    setCourseInformation(courseInfo);
+    setShowNav({
+      opacity: '0.1'
+    });
+    setCourseInfo(courseInfo);
   }
 
   const closeModal = () => {
-    setCourseInformation(null)
+    setShowNav({
+      opacity: '1'
+    });
+    setCourseInfo(null)
   }
 
   return (
     <>
-      <Nav/>
+      <Nav opacity={showNav} />
 
       <div className='home-page-container main-content'>
         <div className='home-page-content'>
-
           <div className='home-page-header'>
             <div className='welcome-message'>
-              <h1> <span className='hello-message'> Welcome to our website! </span> {userName} </h1>
+              <h2 className='destacable-message' > Welcome to our website! </h2>
+              <span> {userName} <CameraButton /></span>
             </div>
-            <UserInfo 
+            <UserCard 
               userName={userName} 
               userTitle={'Ing. Cibernetico Electrónico'}
               userSrc={'https://github.com/soun93.png'}/>
           </div>
-
           <div className='home-page-body'>
             {coursesList.map((course) => (
               <CourseCard
@@ -80,7 +90,7 @@ export function HomePage() {
           </div>
         </div>
       </div>
-      {courseInformation && <CourseModal courseInformation={courseInformation} closeModal={closeModal}></CourseModal>}
+      {courseInfo && <CourseModal courseInfo={courseInfo} closeModal={closeModal}></CourseModal>}
     </>
   
   )

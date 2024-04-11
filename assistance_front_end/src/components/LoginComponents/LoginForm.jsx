@@ -1,13 +1,13 @@
 import { LoginInput } from './LoginInput.jsx'
-import { API_URL } from '../../logic/apiConnection.js'
+import { API_URL } from '../../logic/constUrl.js'
 import { useAuth } from '../../auth/AuthProvider.jsx';
 import { Navigate } from 'react-router-dom';
 
 export const LoginForm = ({ }) => {
   const auth = useAuth();
 
-  const loginRequest = async (e) => {
-    e.preventDefault();
+  const loginRequest = async (event) => {
+    event.preventDefault();
     try {
       const response = await fetch(`${API_URL}/users/login`, {
         method: 'POST',

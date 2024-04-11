@@ -39,9 +39,11 @@
 .login-body .welcome-message {
   margin: 1rem 0;
 }
+
 .login-body .welcome-message h2 {
   font-size: 36px;
 }
+
 .login-form {
   display: flex;
   flex-direction: column;

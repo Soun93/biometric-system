@@ -60,16 +60,12 @@
   width: 30px;
 }
 
-.modal-course-options span label svg {
-  stroke: var(--font-color);
-  stroke-width: 3px;
-}
-
 .modal-course-options span input {
   background-color: transparent;
   outline: none;
   border: none;
   width: 100%;
+  font-size: 16px;
 }
 
 .modal-course-body {
@@ -90,7 +86,7 @@
   padding: 10px;
   position: sticky;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.1)
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);  
 }
 
 .modal-course-body table td {
@@ -100,6 +96,7 @@
 .modal-course-header button:hover {
   transform: scale(1.1);
 }
+
 @media  (max-width: 767.98px)  { 
   .modal-optional-info {
     display: none;

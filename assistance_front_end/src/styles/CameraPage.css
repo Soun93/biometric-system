@@ -1,8 +1,18 @@
 .camera-page-container {
   min-height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 15px;
 }
 
+.camera-page-header .message-container {
+  background-color: var(--secondary-color);
+  padding: 5px 25px;
+  border-radius: 10px;
+}
 .camera {
   position: relative;
 }

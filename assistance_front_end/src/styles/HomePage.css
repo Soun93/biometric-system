@@ -27,15 +27,17 @@
   justify-content: center;
 }
 
-.home-page-header .hello-message {
+.home-page-header .destacable-message {
   display: block;
   font-size: 36px;
 }
 
-.home-page-header .welcome-message h1{
-  align-items: center;
+.home-page-header .welcome-message span {
   font-size: 36px;
   color: var(--destacable-message);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* *BODY */
